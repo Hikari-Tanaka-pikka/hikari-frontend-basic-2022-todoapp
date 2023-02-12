@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import BREAKPOINT from "../../variables/breakpoint";
-import COLOR from "../../variables/color";
-import FONTFAMILY from "../../variables/font_family";
-import TEXT from "../../variables/texts";
+import BREAKPOINT from "../../../variables/breakpoint";
+import COLOR from "../../../variables/color";
+import FONTFAMILY from "../../../variables/font_family";
+import TEXT from "../../../variables/texts";
 
 const Title = () => {
   return <StyledText>SIMPLE TODO APP</StyledText>;
