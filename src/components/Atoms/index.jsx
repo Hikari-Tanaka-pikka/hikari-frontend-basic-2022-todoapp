@@ -7,10 +7,9 @@ import TEXT from "../../variables/texts";
 
 const Title = () => {
   return <StyledText>SIMPLE TODO APP</StyledText>;
-}
+};
 export default Title;
-const StyledText = styled.div
-`
+const StyledText = styled.div`
   color: ${COLOR.WHITE};
   ${TEXT.L};
   font-family: ${FONTFAMILY.ROBOTO};
