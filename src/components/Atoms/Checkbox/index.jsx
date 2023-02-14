@@ -12,6 +12,14 @@ const Checkbox = ({ onClick }) => {
 };
 export default Checkbox;
 
+const Styledimg = styled.img`
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+`;
+
 const StyledButton = styled.button`
   width: 20px;
   height: 20px;
@@ -20,16 +28,10 @@ const StyledButton = styled.button`
   border-radius: 2px;
   background: none;
   border: 2px ${COLOR.LIGHT_GRAY} solid;
-  &:hover .Styledimg {
+  & > ${Styledimg} {
+    opacity: 0;
+  }
+  &:hover > ${Styledimg} {
     opacity: 1;
   }
-`;
-
-const Styledimg = styled.img`
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
 `;
