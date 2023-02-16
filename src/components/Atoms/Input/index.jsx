@@ -2,10 +2,11 @@ import React from "react";
 import { useRef, useEffect } from "react";
 
 
-const Input = (props) => {
+const Input = ({ onEditComplete, defaltValue }) => {
   const inputRef = useRef(null);
+
   useEffect(() => {
-    inputRef.current.value = props.defaltValue;
+    inputRef.current.value = defaltValue;
     inputRef.current.focus();
     inputRef.current.onBlur = () => {
       onEditComplete(inputRef.current.value);
@@ -13,7 +14,7 @@ const Input = (props) => {
     inputRef.current.onkeypress = (e) => {
       if (e.key === 'Enter') {
         onEditComplete(inputRef.current.value);
-    }
+      }
   },[]});
 
   return (
