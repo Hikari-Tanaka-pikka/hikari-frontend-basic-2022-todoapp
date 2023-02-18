@@ -7,7 +7,7 @@ const Input = ({ onEditComplete, defaltValue }) => {
   useEffect(() => {
     inputRef.current.value = defaltValue;
     inputRef.current.focus();
-    inputRef.current.onBlur = () => {
+    inputRef.current.onblur = () => {
       onEditComplete(inputRef.current.value);
     };
     (inputRef.current.onkeypress = (e) => {

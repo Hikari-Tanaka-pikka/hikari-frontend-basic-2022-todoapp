@@ -14,3 +14,7 @@ export default {
 const Template = (args) => <Component {...args} />;
 
 export const Input = Template.bind({});
+Input.args = {
+  defaultValue: "defaultValue",
+  onEditComplete: (value) => console.log(value)
+}
