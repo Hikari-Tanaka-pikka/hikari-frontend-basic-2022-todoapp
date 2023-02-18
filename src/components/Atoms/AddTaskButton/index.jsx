@@ -23,7 +23,7 @@ const StyledShadow = styled.div`
   height: 130%;
   padding: 2px 6px;
   border-radius: 20px;
-  background-color: ${COLOR.LIGHT_GRAY};
+  background-color: ${COLOR.GREEN};
   transition: 0.2s;
 `;
 
