@@ -8,7 +8,7 @@ const EditButton = ({ onClick }) => {
   return (
     <StyledButton onClick={onClick}>
       <StyledShadow />
-      <img src={plus} />
+      <StyledImg src={plus} />
       <StyledText>タスクを追加</StyledText>
     </StyledButton>
   );
@@ -20,7 +20,7 @@ const StyledShadow = styled.div`
   top: 0;
   left: 0;
   width: 105%;
-  height: 130%;
+  height: 110%;
   padding: 2px 6px;
   border-radius: 20px;
   background-color: ${COLOR.GREEN};
@@ -46,6 +46,11 @@ const StyledButton = styled.button`
       opacity: 0.2;
     }
   }
+`;
+
+const StyledImg = styled.img`
+  width: 20px;
+  height: 20px;
 `;
 
 const StyledText = styled.button`
