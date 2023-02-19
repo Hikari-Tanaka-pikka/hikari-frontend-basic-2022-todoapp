@@ -32,6 +32,7 @@ const StyledInput = styled.input`
   color: ${COLOR.LIGHT_GRAY};
   background-color: ${COLOR.BLACK};
   border: none;
+  border-radius: 2px;
   &:focus-visible {
     outline: none;
   }
