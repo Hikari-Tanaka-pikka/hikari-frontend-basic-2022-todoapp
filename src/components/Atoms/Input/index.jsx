@@ -1,5 +1,7 @@
 import React from "react";
 import { useRef, useEffect } from "react";
+import styled from "styled-components";
+import COLOR from "../../../variables/color";
 
 const Input = ({ onEditComplete, defaltValue }) => {
   const inputRef = useRef(null);
@@ -10,18 +12,27 @@ const Input = ({ onEditComplete, defaltValue }) => {
     inputRef.current.onblur = () => {
       onEditComplete(inputRef.current.value);
     };
-    (inputRef.current.onkeypress = (e) => {
+    inputRef.current.onkeypress = (e) => {
       if (e.key === "Enter") {
         onEditComplete(inputRef.current.value);
       }
-    }),
-      [];
-  });
+    }
+  },[]);
 
   return (
     <>
-      <input type="text" ref={inputRef} />
+      <StyledInput type="text" ref={inputRef} />
     </>
   );
 };
 export default Input;
+
+
+const StyledInput = styled.input`
+  color: ${COLOR.LIGHT_GRAY};
+  background-color: ${COLOR.BLACK};
+  border: none;
+  &:focus-visible {
+    outline: none;
+  }
+`;
