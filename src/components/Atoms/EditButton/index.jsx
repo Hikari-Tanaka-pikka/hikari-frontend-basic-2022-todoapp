@@ -25,6 +25,7 @@ const StyledShadow = styled.div`
 `;
 
 const StyledButton = styled.button`
+  display: block;
   border: none;
   outline: none;
   cursor: pointer;
