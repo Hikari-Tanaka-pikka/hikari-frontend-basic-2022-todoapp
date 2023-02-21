@@ -3,7 +3,7 @@ import { useRef, useEffect } from "react";
 import styled from "styled-components";
 import COLOR from "../../../variables/color";
 
-const Input = ({ onEditComplete, defaultValue }) => {
+const Input = ({ onEditComplete, defaultValue = "" }) => {
   const inputRef = useRef(null);
 
   useEffect(() => {
