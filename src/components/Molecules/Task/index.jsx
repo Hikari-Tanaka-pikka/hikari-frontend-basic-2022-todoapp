@@ -18,20 +18,18 @@ const Task = ({
   const onEditButtonClick = () => {
     setStatus(true);
   };
+  const edit = (taskName) => {
+    onEditComplete(taskName);
+    setName(taskName);
+    setStatus(false);
+  };
   return (
     <StyledWrapper>
       <StyledCheckboxWrapper>
         <Checkbox onClick={onClick} />
       </StyledCheckboxWrapper>
       {isEditing ? (
-        <Input
-          defaultValue={taskName}
-          onEditComplete={(taskName) => {
-            onEditComplete(taskName);
-            setName(taskName);
-            setStatus(false);
-          }}
-        />
+        <Input defaultValue={taskName} onEditComplete={edit} />
       ) : (
         <StyledNameAndButtonWrapper>
           <StyledTaskName>{taskName}</StyledTaskName>
