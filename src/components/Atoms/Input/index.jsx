@@ -3,7 +3,7 @@ import { useRef, useEffect } from "react";
 import styled from "styled-components";
 import COLOR from "../../../variables/color";
 
-const Input = ({ onEditComplete, defaltValue }) => {
+const Input = ({ onEditComplete, defaltValue = "" }) => {
   const inputRef = useRef(null);
 
   useEffect(() => {
@@ -16,8 +16,8 @@ const Input = ({ onEditComplete, defaltValue }) => {
       if (e.key === "Enter") {
         onEditComplete(inputRef.current.value);
       }
-    }
-  },[]);
+    };
+  }, []);
 
   return (
     <>
@@ -26,7 +26,6 @@ const Input = ({ onEditComplete, defaltValue }) => {
   );
 };
 export default Input;
-
 
 const StyledInput = styled.input`
   color: ${COLOR.LIGHT_GRAY};
