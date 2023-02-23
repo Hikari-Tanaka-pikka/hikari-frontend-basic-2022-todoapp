@@ -8,7 +8,7 @@ import TEXT from "../../../variables/texts";
 import COLOR from "../../../variables/color";
 
 const Task = ({
-  defaultIsEditing = false,
+  defaultIsEditing,
   onTaskComplete,
   onEditComplete,
   taskName,
@@ -54,6 +54,7 @@ const StyledNameAndButtonWrapper = styled.div`
 `;
 
 const StyledTaskName = styled.p`
+  width: 214px;
   color: ${COLOR.LIGHT_GRAY};
   ${TEXT.S}
   margin: 0;
