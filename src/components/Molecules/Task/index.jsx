@@ -9,24 +9,22 @@ import COLOR from "../../../variables/color";
 
 const Task = ({
   defaultIsEditing = false,
-  onClick,
-  defaultTaskName = "",
+  onTaskComplete,
   onEditComplete,
+  taskName,
 }) => {
-  const [taskName, setName] = useState(defaultTaskName);
-  const [isEditing, setStatus] = useState(defaultIsEditing);
+  const [isEditing, setIsEditing] = useState(defaultIsEditing);
   const onEditButtonClick = () => {
-    setStatus(true);
+    setIsEditing(true);
   };
   const edit = (taskName) => {
     onEditComplete(taskName);
-    setName(taskName);
-    setStatus(false);
+    setIsEditing(false);
   };
   return (
     <StyledWrapper>
       <StyledCheckboxWrapper>
-        <Checkbox onClick={onClick} />
+        <Checkbox onClick={onTaskComplete} />
       </StyledCheckboxWrapper>
       {isEditing ? (
         <Input defaultValue={taskName} onEditComplete={edit} />
