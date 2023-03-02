@@ -42,11 +42,14 @@ export default Task;
 const StyledWrapper = styled.div`
   display: flex;
   gap: 10px;
-  margin-top: 10px;
+  margin-top: 14px;
+  &:nth-of-type(1) {
+    margin-top: 0;
+  }
 `;
 
 const StyledCheckboxWrapper = styled.div`
-  margin-left: 10px;
+  margin-left: 6px;
 `;
 
 const StyledNameAndButtonWrapper = styled.div`
@@ -54,7 +57,7 @@ const StyledNameAndButtonWrapper = styled.div`
 `;
 
 const StyledTaskName = styled.p`
-  width: 214px;
+  width: 390px;
   color: ${COLOR.LIGHT_GRAY};
   ${TEXT.S}
   margin: 0;

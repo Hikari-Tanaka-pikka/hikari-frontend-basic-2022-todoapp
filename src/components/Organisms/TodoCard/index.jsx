@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import styled from "styled-components";
+import COLOR from "../../../variables/color";
 import AddTaskButton from "../../Atoms/AddTaskButton";
 import Task from "../../Molecules/Task";
 
@@ -34,17 +35,15 @@ const TodoCard = () => {
     <StyledWrapper>
       <AddTaskButton onClick={addNewTask} />
       <StyledTaskList>
-        <ol>
-          {taskList.map((task, index) => (
-            <Task
-              key={index}
-              onEditComplete={(value) => taskNameChange(value, index)}
-              taskName={task.name}
-              defaultIsEditing={task.initializing}
-              onTaskComplete={onTaskComplete}
-            />
-          ))}
-        </ol>
+        {taskList.map((task, index) => (
+          <Task
+            key={index}
+            onEditComplete={(value) => taskNameChange(value, index)}
+            taskName={task.name}
+            defaultIsEditing={task.initializing}
+            onTaskComplete={onTaskComplete}
+          />
+        ))}
       </StyledTaskList>
     </StyledWrapper>
   );
@@ -52,9 +51,12 @@ const TodoCard = () => {
 export default TodoCard;
 
 const StyledWrapper = styled.div`
-  width: 100%;
+  width: 500px;
+  background-color: ${COLOR.LIGHT_BLACK};
+  padding: 24px 32px;
 `;
 
 const StyledTaskList = styled.div`
+  margin-top: 14px;
   width: 100%;
 `;

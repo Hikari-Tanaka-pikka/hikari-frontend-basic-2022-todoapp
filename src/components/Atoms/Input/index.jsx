@@ -29,9 +29,9 @@ const Input = ({ onEditComplete, defaultValue = "" }) => {
 export default Input;
 
 const StyledInput = styled.input`
+  width: 390px;
   ${TEXT.S};
   color: ${COLOR.LIGHT_GRAY};
-  width: 214px;
   background-color: ${COLOR.BLACK};
   border: none;
   border-radius: 2px;
