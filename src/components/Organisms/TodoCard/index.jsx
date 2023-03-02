@@ -41,7 +41,7 @@ const TodoCard = () => {
               onEditComplete={(value) => taskNameChange(value, index)}
               taskName={task.name}
               defaultIsEditing={task.initializing}
-              onClick={onTaskComplete}
+              onTaskComplete={onTaskComplete}
             />
           ))}
         </ol>
