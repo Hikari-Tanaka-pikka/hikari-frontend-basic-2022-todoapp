@@ -3,7 +3,7 @@ import Component from "./index";
 
 export default {
   component: Component,
-  title: "Atoms/Input",
+  title: "Molecules/Task",
   parameters: {
     backgrounds: {
       default: "dark",
@@ -13,7 +13,10 @@ export default {
 
 const Template = (args) => <Component {...args} />;
 
-export const Input = Template.bind({});
-Input.args = {
+export const Task = Template.bind({});
+Task.args = {
   onTaskComplete: () => console.log("task completed"),
+  onEditComplete: (taskName) => console.log(`taskname changed ${taskName}`),
+  taskName: "defaultValue",
+  defaultIsEditing: false,
 };

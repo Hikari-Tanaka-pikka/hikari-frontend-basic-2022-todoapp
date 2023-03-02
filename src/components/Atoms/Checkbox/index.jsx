@@ -21,6 +21,7 @@ const Styledimg = styled.img`
 `;
 
 const StyledButton = styled.button`
+  display: block;
   width: 20px;
   height: 20px;
   cursor: pointer;
