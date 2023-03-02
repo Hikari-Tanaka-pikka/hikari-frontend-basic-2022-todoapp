@@ -2,6 +2,7 @@ import React from "react";
 import { useRef, useEffect } from "react";
 import styled from "styled-components";
 import COLOR from "../../../variables/color";
+import TEXT from "../../../variables/texts";
 
 const Input = ({ onEditComplete, defaultValue = "" }) => {
   const inputRef = useRef(null);
@@ -28,6 +29,7 @@ const Input = ({ onEditComplete, defaultValue = "" }) => {
 export default Input;
 
 const StyledInput = styled.input`
+  ${TEXT.S};
   color: ${COLOR.LIGHT_GRAY};
   width: 214px;
   background-color: ${COLOR.BLACK};
