@@ -54,12 +54,13 @@ const StyledCheckboxWrapper = styled.div`
 
 const StyledNameAndButtonWrapper = styled.div`
   display: flex;
+  flex: 1 1 auto;
 `;
 
 const StyledTaskName = styled.p`
-  width: 390px;
   color: ${COLOR.LIGHT_GRAY};
   ${TEXT.S}
   margin: 0;
   margin-right: 10px;
+  flex: 1 1 auto;
 `;
