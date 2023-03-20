@@ -10,7 +10,6 @@ BREAKPOINT;
 const MainPage = () => {
   return (
     <StyledWrapper>
-      <StyledMessage>S Text</StyledMessage>
       <StyledHeading>SIMPLE TODO APP</StyledHeading>
       <TodoCard />
     </StyledWrapper>
@@ -32,22 +31,5 @@ const StyledHeading = styled.p`
   margin: 60px 20px 20px 20px;
   @media (max-width: ${BREAKPOINT.MEDIUM}) {
     ${TEXT.M};
-  }
-`;
-
-const StyledMessage = styled.div`
-  padding: 10px 20px;
-  width: 400px;
-  height: 40px;
-  border-radius: 4px;
-  color: ${COLOR.WHITE};
-  background-color: ${COLOR.RED};
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%, 0%);
-  top: 20px;
-  @media (max-width: ${BREAKPOINT.MEDIUM}) {
-    width: 100%;
-    top: 15px;
   }
 `;
