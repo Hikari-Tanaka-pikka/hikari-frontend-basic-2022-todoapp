@@ -43,9 +43,6 @@ const StyledWrapper = styled.div`
   display: flex;
   gap: 10px;
   margin-top: 14px;
-  &:nth-of-type(1) {
-    margin-top: 0;
-  }
 `;
 
 const StyledCheckboxWrapper = styled.div`
