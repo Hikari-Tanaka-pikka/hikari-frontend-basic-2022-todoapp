@@ -5,12 +5,14 @@ import COLOR from "../../../variables/color";
 import FONT from "../../../variables/font_family";
 import TEXT from "../../../variables/texts";
 import BREAKPOINT from "../../../variables/breakpoint";
-BREAKPOINT;
+import Title from "../../Atoms/Title";
 
 const MainPage = () => {
   return (
     <StyledWrapper>
-      <StyledHeading>SIMPLE TODO APP</StyledHeading>
+      <StyledHeading>
+        <Title />
+      </StyledHeading>
       <TodoCard />
     </StyledWrapper>
   );
@@ -24,12 +26,6 @@ const StyledWrapper = styled.div`
 `;
 
 const StyledHeading = styled.p`
-  color: ${COLOR.WHITE};
-  ${TEXT.L};
   text-align: center;
-  font-family: ${FONT.ROBOTO};
   margin: 60px 20px 20px 20px;
-  @media (max-width: ${BREAKPOINT.MEDIUM}) {
-    ${TEXT.M};
-  }
 `;
