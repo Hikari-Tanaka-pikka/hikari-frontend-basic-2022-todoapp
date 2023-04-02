@@ -4,16 +4,16 @@ const AlertHandlerContext = createContext();
 
 export const AlertHandlerProvider = ({ children }) => {
   const [alertState, setAlertState] = useState({
-    visible: false,
-    errorText: "",
+    isActive: false,
+    alertMessage: "",
   });
 
-  const setAlert = (errorText) => {
-    setAlertState({ visible: true, errorText: errorText });
+  const setAlert = (alertMessage) => {
+    setAlertState({ isActive: true, alertMessage: alertMessage });
   };
 
   const closeAlert = () => {
-    setAlertState({ visible: false, errorText: "" });
+    setAlertState({ isActive: false, errorText: "" });
   };
 
   const contextValue = {

@@ -1,5 +1,4 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import COLOR from "../../../variables/color";
 import { useAlertHandlerContext } from "../../../contexts/alert_handler";
