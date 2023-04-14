@@ -62,6 +62,5 @@ const StyledWrapper = styled.div`
 `;
 
 const StyledTaskList = styled.div`
-  margin-top: 14px;
   width: 100%;
 `;
