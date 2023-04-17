@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
+import { useState } from "react";
 import styled from "styled-components";
 import COLOR from "../../../variables/color";
 import BREAKPOINT from "../../../variables/breakpoint";
@@ -6,15 +7,7 @@ import AddTaskButton from "../../Atoms/AddTaskButton";
 import Task from "../../Molecules/Task";
 
 const TodoCard = () => {
-  const [taskList, setTaskList] = useState(() => {
-    const storedTasks = localStorage.getItem("tasks");
-    return storedTasks ? JSON.parse(storedTasks) : [];
-  });
-
-  useEffect(() => {
-    localStorage.setItem("tasks", JSON.stringify(taskList));
-  }, [taskList]);
-
+  const [taskList, setTaskList] = useState([]);
   const addNewTask = () => {
     const newTask = {
       name: "",
@@ -22,7 +15,6 @@ const TodoCard = () => {
     };
     setTaskList(taskList.concat(newTask));
   };
-
   const taskNameChange = (value, index) => {
     if (value === "") {
       const notask = [...taskList];
@@ -34,7 +26,6 @@ const TodoCard = () => {
       setTaskList(addTask);
     }
   };
-
   const onTaskComplete = (index) => {
     const completed = [...taskList];
     completed.splice(index, 1);
@@ -58,7 +49,6 @@ const TodoCard = () => {
     </StyledWrapper>
   );
 };
-
 export default TodoCard;
 
 const StyledWrapper = styled.div`
@@ -72,6 +62,5 @@ const StyledWrapper = styled.div`
 `;
 
 const StyledTaskList = styled.div`
-  margin-top: 14px;
   width: 100%;
 `;
