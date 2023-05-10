@@ -31,13 +31,14 @@ const TodoCard = () => {
     } else {
       const addTask = [...taskList];
       addTask[index].name = value;
+      addTask[index].initializing = false;
       setTaskList(addTask);
     }
   };
 
-  const onTaskComplete = (index) => {
+  const onTaskComplete = (key) => {
     const completed = [...taskList];
-    completed.splice(index, 1);
+    completed.splice(key, 1);
     setTaskList(completed);
   };
 
@@ -51,7 +52,7 @@ const TodoCard = () => {
             onEditComplete={(value) => taskNameChange(value, index)}
             taskName={task.name}
             defaultIsEditing={task.initializing}
-            onTaskComplete={onTaskComplete}
+            onTaskComplete={() => onTaskComplete(index)}
           />
         ))}
       </StyledTaskList>
