@@ -28,10 +28,10 @@ const TodoCard = () => {
       const notask = [...taskList];
       notask.splice(index, 1);
       setTaskList(notask);
+      AlertHandlerContext.setAlert("タスクの名前が設定されていません");
     } else {
       const addTask = [...taskList];
       addTask[index].name = value;
-      addTask[index].initializing = false;
       setTaskList(addTask);
     }
   };
