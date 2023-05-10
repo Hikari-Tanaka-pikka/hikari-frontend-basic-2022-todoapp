@@ -1,5 +1,5 @@
 import { useAlertHandlerContext } from "../../../contexts/alert_handler";
-import Alert from "../../Atoms/Alert ";
+import Alert from "../../Atoms/Alert";
 import React, { useEffect } from "react";
 
 const AlertManager = () => {
