@@ -4,8 +4,11 @@ import COLOR from "../../../variables/color";
 import BREAKPOINT from "../../../variables/breakpoint";
 import AddTaskButton from "../../Atoms/AddTaskButton";
 import Task from "../../Molecules/Task";
+import { useAlertHandlerContext } from "../../../contexts/alert_handler";
 
 const TodoCard = () => {
+  const AlertHandlerContext = useAlertHandlerContext();
+
   const [taskList, setTaskList] = useState(() => {
     const storedTasks = localStorage.getItem("tasks");
     return storedTasks ? JSON.parse(storedTasks) : [];
