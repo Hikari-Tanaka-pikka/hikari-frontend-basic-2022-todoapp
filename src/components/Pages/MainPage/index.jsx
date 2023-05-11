@@ -22,7 +22,9 @@ export default MainPage;
 
 const StyledWrapper = styled.div`
   background-color: ${COLOR.DEEP_BLUE_GRAY};
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 const StyledHeading = styled.p`
