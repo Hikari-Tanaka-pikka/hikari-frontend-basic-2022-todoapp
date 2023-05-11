@@ -71,7 +71,8 @@ const StyledWrapper = styled.div`
   padding: 24px 32px;
   margin: 0 auto;
   @media (max-width: ${BREAKPOINT.MEDIUM}) {
-    width: 100%;
+    width: calc(100% - 40px);
+    margin: 0 20px;
   }
 `;
 

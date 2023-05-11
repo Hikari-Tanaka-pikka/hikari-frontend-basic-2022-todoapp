@@ -12,8 +12,8 @@ const StyledAlertText = styled.div`
   position: absolute;
   left: 0;
   right: 0;
-  top: 80px;
-  margin: auto;
+  top: 90px;
+  margin: 0 auto;
   background-color: ${COLOR.RED};
   border-radius: 4px;
   padding: 10px 20px;
@@ -21,7 +21,7 @@ const StyledAlertText = styled.div`
   width: 400px;
   ${TEXT.S};
   @media screen and (max-width: ${BREAKPOINT.MEDIUM}) {
-    width: 100%;
+    width: calc(100% - 40px);
     top: 40px;
   }
   transition: 0.5s;

@@ -25,6 +25,10 @@ const StyledWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 1024px;
+  @media (max-width: ${BREAKPOINT.MEDIUM}) {
+    height: 568px;
+  }
 `;
 
 const StyledHeading = styled.p`

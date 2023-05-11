@@ -19,5 +19,5 @@ const Template = (args) => (
   </AlertHandlerProvider>
 );
 
-export const Default = Template.bind({});
-Default.args = {};
+export const MainPage = Template.bind({});
+MainPage.args = {};

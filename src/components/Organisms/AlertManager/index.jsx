@@ -6,7 +6,6 @@ const AlertManager = () => {
   const AlertHandlerContext = useAlertHandlerContext();
   useEffect(() => {
     if (AlertHandlerContext.isActive == true) {
-      console.log("aaa");
       setTimeout(() => {
         AlertHandlerContext.closeAlert();
       }, 5000);
