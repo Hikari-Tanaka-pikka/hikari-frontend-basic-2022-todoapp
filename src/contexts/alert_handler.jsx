@@ -13,7 +13,7 @@ export const AlertHandlerProvider = ({ children }) => {
   };
 
   const closeAlert = () => {
-    setAlertState({ isActive: false, errorText: "" });
+    setAlertState({ isActive: false, errorText: alertState.errorText });
   };
 
   const contextValue = {
