@@ -3,7 +3,7 @@ import Alert from "../../Atoms/Alert";
 import React, { useEffect } from "react";
 
 const AlertManager = () => {
-  const alertHandlerContext = useAlertHandlerContext();
+  const AlertHandlerContext = useAlertHandlerContext();
   useEffect(() => {
     if (AlertHandlerContext.isActive == true) {
       setTimeout(() => {
